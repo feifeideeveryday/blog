@@ -1,0 +1,16 @@
+diff a/博客/.idea/workspace.xml b/博客/.idea/workspace.xml	(rejected hunks)
+@@ -32,11 +32,11 @@
+           </provider>
+         </entry>
+       </file>
+-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
++      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
+         <entry file="file://$PROJECT_DIR$/main.py">
+           <provider selected="true" editor-type-id="text-editor">
+-            <state relative-caret-position="209">
+-              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
++            <state relative-caret-position="385">
++              <caret line="41" column="21" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+               <folding>
+                 <element signature="e#0#23#0" expanded="true" />
+               </folding>
