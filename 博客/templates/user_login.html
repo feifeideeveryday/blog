@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册与登录页面</title>
+    <style>
+
+        body {
+        background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1489672433394&di=184bf905a580654f61ce3d1908cefdb2&imgtype=0&src=http%3A%2F%2Fimg17.3lian.com%2Fd%2Ffile%2F201702%2F21%2F70f4718cea9e1319f84fb77f8d969816.jpg);
+        }
+        input {
+        height: 30px;
+        width: 200px;
+        margin:3px;
+        border-width: 0.1px;
+        border-style: solid;
+        border-color: #bf828c;
+        }
+        button {
+       width: 63px;
+        height: 24px;
+        /* background: #d03e57; */
+        margin-top: 3px;
+        border-radius: 5px;
+        border-style: solid;
+        border-width: 0.1px;
+        border-color: pink;
+        background-color: #eef7fb;
+        padding: 5px;
+        position: relative;
+        left: 64px;
+        height: 34px;
+    }
+       .zhucedenglu{
+       display:flex;
+       justify-content: center;
+       position: relative;
+       top: 150px;
+       }
+    </style>
+</head>
+<body>
+      <div class="zhucedenglu">
+          <div  class="zhuce">
+          <form action="/user/register" method="post">
+          <input  name="username" placeholder="请输入用户名">
+          <br>
+          <input  name="password" placeholder="请输入密码">
+          <br>
+          <button  type="submit"> 注册</button>
+          </form>
+          </div>
+         <div class="denglu">
+         <form action="/user/login" method="post">
+          <input  name="username" placeholder="请输入用户名">
+          <br>
+          <input  name="password" placeholder="请输入密码">
+          <br>
+          <button  type="submit"> 登录</button>
+         </form>
+         </div>
+      </div>
+</body>
+</html>

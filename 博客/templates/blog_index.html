@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>博客主页</title>
+    <style>
+        .blog-task {
+            font-size: 32px;
+            font-weight: bolder;
+            position: relative;
+            top: 42px;
+            }
+         .blog-header {
+            background: rgba(51, 43, 45, 0.17);
+            margin-bottom: 20px;
+            height: 120px;
+            width:100%;
+            padding:10px;
+            }
+        .blog-cell-task {
+            font-size: 26px;
+            font-weight: 800;
+            background: rgba(208, 193, 195, 0.49);
+            width: 100%;
+            margin: 10px 0;
+        }
+            .blog-cell-content {
+                background: rgba(86, 75, 77, 0.18);
+                padding: 5px;
+            }
+    </style>
+</head>
+<body>
+       <div class="blog">
+           <div class="blog-main">
+               <div class="blog-header">
+                   <div class="blog-task"> life style</div>
+               </div>
+               <div class="blog-content">
+                   <div class="blog-cell">
+                           {% for b in blogs %}
+                                <div class="blog-cell-task">
+                                {{b.task}}
+                               </div>
+                                <div class="blog-cell-content">
+                                {{b.content}}
+                                 </div>
+                                {% for c in b.comments %}
+                                <div class="blog-cell-comment">
+                                    {{ c.content }}
+                                 </div>
+                                {% endfor %}
+
+                            <form  action="/comment/add" method="post">
+                                <input  type="hidden"  name="blog_id" value="{{b.id}}">
+                                <input  name="content">
+                                <button type="submit" > 评论</button>
+
+                            </form>
+                        {% endfor %}
+                       <a class="blog-add" href="/blog/add/path" >写博客</a>
+                       <a  href="/user/profile" >个人主页</a>
+                   </div>
+               </div>
+           </div>
+        </div>
+</body>
+</html>
