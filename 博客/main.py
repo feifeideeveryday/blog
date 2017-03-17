@@ -33,4 +33,10 @@ def error404(e):
 # 运行代码
 # 默认端口是 5000
 if __name__ == '__main__':
-    app.run(debug=True)
+    config = dict(
+        debug=True,
+        host='0.0.0.0',
+        port=5000,
+        threaded=True,
+    )
+    app.run(**config)
